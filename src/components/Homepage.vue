@@ -1,12 +1,12 @@
 <template>
   <div class="section">
-      <div class="middle-section">
+      <div class="homepage-top-section">
           <div class="middle-block">
               <div class="left-block">
                   <img class="image" src="../assets/me.png">
               </div>
               <div class="right-block">
-                  <div class="large-text">Hi, I'm Simon!</div>
+                  <div class="large-text">Hello, I'm Simon!</div>
                   <div class="large-text">My skills include</div>
                   <div class="large-text dynamic-text"></div>
               </div>
@@ -15,8 +15,24 @@
               <a href="https://www.linkedin.com/in/simon-lam-656671100/"><img class="social-media-image" src="../assets/linkedin.png"></a>
               <a href="https://github.com/TheSimonLam"><img class="social-media-image" src="../assets/github.png"></a>
           </div>
-          <hr class="first-hr">
-          <hr class="second-hr">
+      </div>
+      <div class="middle-section">
+
+          <div class="flex-container">
+              <div class="flex-item">
+                  <div class="title">Introduction</div>
+                  <div class="text">Hi, I'm Simon Lam. I'm a software developer based in North Wales with a BSc degree in Creative Technologies from Bangor University. I have a keen interest in developing new tools. At three years experience in the technology industry, I will always learning from new opportunities.</div>
+              </div>
+              <div class="flex-item">
+                  <div class="title">Hobbies</div>
+                  <div class="text">In my spare time, my hobbies include tinkering with DIY projects, mountaineering, browsing the latest memes, keeping up to date with the latest technologies and social media platforms, cooking (and eating) delicious foods, producing house music, and travelling the globe in search of something i've never tried before.</div>
+              </div>
+              <div class="flex-item">
+                  <div class="title">Interests</div>
+                  <div class="text">I'm interested in developing my personal skillset as well as sharing my knowledge to those I hold dear to me. I firmly believe that one should always strive to attain knowledge. Once a student, always a student. The learning should never stop.</div>
+              </div>
+          </div>
+
       </div>
   </div>
 </template>
@@ -33,7 +49,7 @@ export default {
     },
     mounted(){
         let options = {
-            strings: ["Front-end Dev.", "Java Dev.", "Mobile Design", "Unit Testing", "Webpack/Babel", "Marketing", "Music Prod.", "Google Adsense", "Video Prod.", "Technology", "Game Design"],
+            strings: ["Front-end Dev.", "Java Dev.", "Mobile Design", "Unit Testing", "Webpack/Babel", "Marketing", "Music Prod.", "Vue.js", "Video Prod.", "New Tech.", "Game Design"],
             typeSpeed: 40,
             backSpeed: 40,
             loop: true,
@@ -48,13 +64,35 @@ export default {
 </script>
 
 <style>
-    .section{
-        min-height: 100vh;
-        background-color: #00A8E8;
+    .homepage-top-section{
+        padding-top: calc(100%/25);
     }
 
-    .middle-section{
-        padding-top: calc(100%/25);
+    .title{
+        font-size: 1.5em;
+        color: white;
+        padding-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .text{
+        font-size: 1.2em;
+        text-align: left;
+        color: white;
+        line-height: 25px;
+    }
+
+    .flex-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .flex-item{
+        background: #007EA7;
+        padding: 10px;
+        margin: 10px;
     }
 
     .middle-block{
@@ -102,19 +140,5 @@ export default {
     .dynamic-text{
         color: #003459;
         font-weight: bold;
-    }
-
-    hr{
-        border-width: 2px;
-        border-style: dashed;;
-        color: white;
-    }
-
-    .first-hr{
-        width: 50%;
-    }
-
-    .second-hr{
-        width: 30%;
     }
 </style>

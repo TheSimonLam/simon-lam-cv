@@ -2,7 +2,6 @@
     <div id="app">
         <div class="header-wrapper">
             <router-link to="/">Home</router-link>
-            <router-link to="/about">About</router-link>
             <router-link to="/skills">Skills</router-link>
             <router-link to="/experience">Experience</router-link>
             <router-link to="/contact">Contact</router-link>
@@ -25,12 +24,22 @@
 
 <style>
     #app {
-        font-family: 'Cabin Sketch', cursive;
+        font-family: 'Roboto', sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
 
+    .middle-section {
+        margin: 0 15%;
+    }
+
+    .section{
+        min-height: 100vh;
+        background-color: #00A8E8;
+    }
+
     .header-wrapper{
+        font-family: 'Cabin Sketch', cursive;
         text-align: center;
         padding: 50px 0 50px 0;
         font-size: 3em;
