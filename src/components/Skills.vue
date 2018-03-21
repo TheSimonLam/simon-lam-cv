@@ -103,23 +103,60 @@ export default {
       ]
     }
   },
-  created(){
+  mounted(){
+      let counter = 0;
+      let flipInterval = setInterval(fadeIn.bind(this), 20);
 
+      function fadeIn() {
+          if(counter < this.skills.length){
+              if(document.getElementsByClassName('item-container')[counter]){
+                  document.getElementsByClassName('item-container')[counter].classList.add('fadeIn');
+                  counter++;
+              }
+              else{
+                  clearInterval(flipInterval);
+              }
+          }
+          else{
+              clearInterval(flipInterval);
+          }
+      }
   }
 }
 </script>
 
 <style>
   .item-container {
+    display: none;
     width: 150px;
-    height: 200px;
+    height: 180px;
     background-color: white;
-    display: inline-block;
     margin: 10px;
     border-radius: 10px;
     padding: 10px;
     font-size: 1.1em;
     font-weight: bold;
     text-align: center;
+
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  .fadeIn {
+    display: inline-block;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
   }
 </style>

@@ -21,15 +21,15 @@
           <div class="flex-container">
               <div class="flex-item">
                   <div class="title">Introduction</div>
-                  <div class="text">Hi, I'm Simon Lam. I'm a software developer based in North Wales with a BSc degree in Creative Technologies from Bangor University. I have a keen interest in developing new tools. At three years experience in the technology industry, I will always learning from new opportunities.</div>
+                  <div class="text">Hi, I'm Simon Lam. I'm a software developer based in North Wales with a BSc degree in Creative Technologies from Bangor University.<br><br>I have a keen interest in developing new tools. Holding three years experience in the technology industry, I will always be learning from new opportunities.</div>
               </div>
               <div class="flex-item">
                   <div class="title">Hobbies</div>
-                  <div class="text">In my spare time, my hobbies include tinkering with DIY projects, mountaineering, browsing the latest memes, keeping up to date with the latest technologies and social media platforms, cooking (and eating) delicious foods, producing house music, and travelling the globe in search of something i've never tried before.</div>
+                  <div class="text">In my spare time, my hobbies include tinkering with DIY projects, mountaineering, and browsing the latest memes. <br><br> I also like keeping up to date with the latest technologies and social media platforms, cooking (and eating) delicious foods, producing house music, and travelling the globe in search of something i've never tried before.</div>
               </div>
               <div class="flex-item">
                   <div class="title">Interests</div>
-                  <div class="text">I'm interested in developing my personal skillset as well as sharing my knowledge to those I hold dear to me. I firmly believe that one should always strive to attain knowledge. Once a student, always a student. The learning should never stop.</div>
+                  <div class="text">I'm interested in developing my personal skillset as well as sharing my knowledge with others. <br><br>Once a student, always a student. The learning never stops!</div>
               </div>
           </div>
 
@@ -69,7 +69,7 @@ export default {
     }
 
     .title{
-        font-size: 1.5em;
+        font-size: 2em;
         color: white;
         padding-bottom: 20px;
         font-weight: bold;
@@ -79,7 +79,7 @@ export default {
         font-size: 1.2em;
         text-align: left;
         color: white;
-        line-height: 25px;
+        line-height: 30px;
     }
 
     .flex-container{
@@ -87,12 +87,15 @@ export default {
         flex-direction: row;
         justify-content: space-between;
         margin: 0 auto;
+        padding-bottom: 150px;
     }
 
     .flex-item{
         background: #007EA7;
         padding: 10px;
         margin: 10px;
+        border: 2px solid white;
+        width: 100%;
     }
 
     .middle-block{

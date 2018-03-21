@@ -1,6 +1,8 @@
 <template>
-  <div>
+  <div class="section">
+    <div class="middle-section">
 
+    </div>
   </div>
 </template>
 

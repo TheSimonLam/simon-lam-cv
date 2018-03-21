@@ -31,6 +31,7 @@
 
     .middle-section {
         margin: 0 15%;
+        overflow: auto;
     }
 
     .section{
@@ -59,21 +60,19 @@
     }
 
     .footer-container{
-        height: 25px;
+        height: 20px;
         width: 100%;
         background-color: #007EA7;
+        color: white;
+        font-family: 'Roboto', sans-serif;
     }
 
     .last-updated-text{
-        color: white;
         float: left;
-        font-size: 1.3em;
     }
 
     .email-text{
-        color: white;
         float: right;
-        font-size: 1.3em;
     }
 
     /* Smartphones (portrait and landscape) ----------- */
