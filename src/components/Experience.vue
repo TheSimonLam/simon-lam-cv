@@ -3,32 +3,34 @@
     <div class="middle-section">
 
       <div class="box-container">
-        <div class="left">
-          <img src="../assets/experience/tsm.png">
-        </div>
         <div class="right">
-          <div class="exp-title">MoneySupermarket: <br>TravelSupermarket</div>
-          <div class="exp-text">From October 2015, I was hired as a Junior Developer for the TravelSupermarket brand of MoneySupermarket. I have since been promoted to a professional developer role after aquiring new skills and demonstrating my abilities.</div>
+          <div class="exp-title">MoneySupermarket: TravelSupermarket</div>
+          <div class="exp-text"><img class="exp-image" src="../assets/experience/tsm.png">Fresh out of university and fired up to enter the technology industry,
+            in October 2015 I was granted the amazing opportunity to become a Junior Developer for the TravelSupermarket brand of MoneySupermarket.<br><br>
+            TravelSupermarket are a UK based travel comparisson website and I could not have been blessed with a friendlier group of collegues to work with.<br><br>
+            After numerous projects and hard-fought struggles, I have since been promoted to a professional developer role by aquiring new skills and demonstrating my abilities.<br><br>
+            I have learned that technology moves at a rapid pace and it is absolutely vital to continue learning whilst on the job. Cross-skilling is a daily part of what I do.</div>
         </div>
       </div>
 
       <div class="box-container">
-        <div class="left">
-          <img src="../assets/experience/bangor.png">
-        </div>
         <div class="right">
           <div class="exp-title">Bangor University</div>
-          <div class="exp-text">I studied a BSc in Creative Technology from 2012 to 2015 where I discovered my, at the time, newfound love for technology and creating engaging software. My final year dissertation consisted of studying how to portray narrative through the medium of techniques within video games. Along with a 10,000 dissertation, it also involved creating a fully functioning video game in Unity. As a result, I attained a 2:1.</div>
+          <div class="exp-text"><img class="exp-image" src="../assets/experience/bangor.png">After completing my A-levels at Yale College, I studied a BSc in Creative Technology
+            from 2012 to 2015 where I had discovered my, at the time, newfound love for technology and creating engaging software.<br><br>
+            My final year dissertation I studied how to portray narrative through the medium of techniques used within video games.
+            Along with a 10,000 dissertation, it also involved creating a fully functioning video game in Unity 3D. After much hard work, graft, and sleepless nights, I had attained a Second Class Honours, Division 1. Also known as a "2:1".<br><br>
+            As for many of us, university was a huge part of my life, and I cannot thank my lecturers enough for preparing me with the, at the time, seemingly laborious programming tasks.
+            I am very thankful for the people I have met, the projects that I have worked on, and mostly my eventual sound education.</div>
         </div>
       </div>
 
       <div class="box-container">
-        <div class="left">
-          <img src="../assets/experience/yale.png">
-        </div>
         <div class="right">
           <div class="exp-title">Yale College</div>
-          <div class="exp-text">From 2010 to 2012 I attended Yale College in Wrexham where I studied A-levels in Computing, Media Studies, and English Literature.</div>
+          <div class="exp-text"><img class="exp-image" src="../assets/experience/yale.png">Coming out of High School I decided against 6th form and chose to attend my local college.
+            From 2010 to 2012 I attended Yale College in Wrexham where I studied A-levels in Computing, Media Studies, and English Literature.<br><br>
+            At this point in my life, I had never experienced using a programming language to create software. I had very fond memories of programming my first working SQL database hosted on the Yale College servers.</div>
         </div>
       </div>
 
@@ -44,42 +46,90 @@ export default {
 
     }
   },
-  created(){
+  mounted(){
+      let counter = 0;
+      let flipInterval = setInterval(fadeIn.bind(this), 200);
 
+      function fadeIn() {
+          if(counter < document.getElementsByClassName('box-container').length){
+              if(document.getElementsByClassName('box-container')[counter]){
+                  document.getElementsByClassName('box-container')[counter].classList.add('fadeInExp');
+                  counter++;
+              }
+              else{
+                  clearInterval(flipInterval);
+              }
+          }
+          else{
+              clearInterval(flipInterval);
+          }
+      }
   }
 }
 </script>
 
 <style>
 .box-container{
+  opacity: 0;
   background: white;
-  padding: 10px;
-  border: 2px solid black;
+  border-radius: 10px;
   color: black;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 10px;
+
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 .exp-title{
   font-size: 2em;
   padding-bottom: 20px;
   font-weight: bold;
+  font-family: 'Cabin Sketch', cursive;
+  color: #003459;
 }
 
 .exp-text{
   font-size: 1.2em;
   text-align: left;
-  line-height: 25px;
+  line-height: 30px;
 }
 
-  .left{
+.exp-image{
+  float: left;
+  padding: 10px;
+}
+
+  .right{
+    padding: 20px;
     display:inline-block;
   }
 
-  .right{
-    display:inline-block;
+  .fadeInExp {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
   }
+
+  @-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (max-device-width: 480px){
+  .middle-section{
+    margin: auto;
+  }
+}
 </style>

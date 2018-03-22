@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <div class="middle-section">
+    <div class="middle-section align-center">
       <div class="item-container" v-for="item in skills">
         <img :src=item.path>
         <div>{{item.name}}</div>
@@ -86,7 +86,7 @@ export default {
           },
           {
               name: 'Affiliate Tracking',
-              path: require('../assets/skills/vue.png')
+              path: require('../assets/skills/affiliate.png')
           },
           {
               name: 'Music Production',
@@ -99,6 +99,14 @@ export default {
           {
               name: 'Game Design',
               path: require('../assets/skills/game.png')
+          },
+          {
+              name: 'Google Analytics',
+              path: require('../assets/skills/ga.png')
+          },
+          {
+              name: 'Unit Testing',
+              path: require('../assets/skills/testing.png')
           }
       ]
     }
@@ -158,5 +166,13 @@ export default {
   @keyframes fadeIn {
     0% {opacity: 0;}
     100% {opacity: 1;}
+  }
+
+  /* iPads (portrait) ----------- */
+  @media only screen
+  and (max-device-width: 1024px) {
+    .align-center{
+      text-align: center;
+    }
   }
 </style>

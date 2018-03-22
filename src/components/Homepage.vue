@@ -25,7 +25,7 @@
               </div>
               <div class="flex-item">
                   <div class="title">Hobbies</div>
-                  <div class="text">In my spare time, my hobbies include tinkering with DIY projects, mountaineering, and browsing the latest memes. <br><br> I also like keeping up to date with the latest technologies and social media platforms, cooking (and eating) delicious foods, producing house music, and travelling the globe in search of something i've never tried before.</div>
+                  <div class="text">In my spare time, my hobbies include tinkering with DIY projects, producing music, and browsing the latest memes. <br><br> I also like keeping up to date with the latest technologies and social media platforms, cooking (and eating) delicious foods, video gaming, and travelling the globe in search of something i've never tried before.</div>
               </div>
               <div class="flex-item">
                   <div class="title">Interests</div>
@@ -96,6 +96,7 @@ export default {
         margin: 10px;
         border: 2px solid white;
         width: 100%;
+        border-radius: 10px;
     }
 
     .middle-block{
@@ -111,11 +112,13 @@ export default {
     .left-block{
         display: inline-block;
         float: left;
+        vertical-align: middle;
     }
 
     .right-block{
         display: inline-block;
         padding-left: 30px;
+        vertical-align: middle;
     }
 
     .image{
@@ -130,7 +133,6 @@ export default {
 
     .social-media-container{
         margin: auto;
-        width: 530px;
         padding: 110px 0;
         text-align: center;
     }
@@ -143,5 +145,51 @@ export default {
     .dynamic-text{
         color: #003459;
         font-weight: bold;
+    }
+
+    /* Smartphones (portrait and landscape) ----------- */
+    @media only screen
+    and (max-device-width: 480px){
+        body .image{
+            max-height: 80px;
+        }
+
+        body .large-text {
+            font-size: 1.2em;
+        }
+
+        body .middle-block{
+            height: 125px;
+            width: 300px;
+        }
+    }
+
+    /* iPads (portrait) ----------- */
+    @media only screen
+    and (max-device-width: 1024px) {
+        .flex-container{
+            display: block;
+        }
+
+        .middle-section{
+            margin: auto;
+        }
+
+        .flex-item{
+            width: auto;
+        }
+
+        .image{
+            max-height: 120px;
+        }
+
+        .large-text {
+            font-size: 2em;
+        }
+
+        .middle-block{
+            height: 125px;
+            width: 400px;
+        }
     }
 </style>
