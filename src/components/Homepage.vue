@@ -3,7 +3,7 @@
       <div class="homepage-top-section">
           <div class="middle-block">
               <div class="left-block">
-                  <img class="image" src="../assets/me.png">
+                  <img class="image" src="../assets/me.jpg">
               </div>
               <div class="right-block">
                   <div class="large-text">Hello, I'm Simon!</div>
