@@ -78,7 +78,7 @@ export default {
           },
           {
               name: 'Google DFP',
-              path: require('../assets/skills/dfp.png')
+              path: require('../assets/skills/DFP.png')
           },
           {
               name: 'Responsive Design',
