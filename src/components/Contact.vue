@@ -21,7 +21,14 @@
           <div class="contact-detail-wrapper">
             <a href="https://github.com/TheSimonLam">
               <img class="contact-icon" src="../assets/contact/github.png">
-              <div class="contact-detail">TheSimonLam</div>
+              <div class="contact-detail">github.com/TheSimonLam</div>
+            </a>
+          </div>
+
+          <div class="contact-detail-wrapper">
+            <a href="https://soundcloud.com/ninjaroni">
+              <img class="contact-icon" src="../assets/contact/soundcloud.png">
+              <div class="contact-detail">soundcloud.com/ninjaroni</div>
             </a>
           </div>
 

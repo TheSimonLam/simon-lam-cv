@@ -14,6 +14,7 @@
           <div class="social-media-container">
               <a href="https://www.linkedin.com/in/simon-lam-656671100/"><img class="social-media-image" src="../assets/linkedin.png"></a>
               <a href="https://github.com/TheSimonLam"><img class="social-media-image" src="../assets/github.png"></a>
+              <a href="https://soundcloud.com/ninjaroni"><img class="social-media-image" src="../assets/soundcloud.png"></a>
           </div>
       </div>
       <div class="middle-section">
