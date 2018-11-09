@@ -50,7 +50,7 @@ export default {
     },
     mounted(){
         let options = {
-            strings: ["Front-end Dev.", "Java Dev.", "Mobile Design", "Unit Testing", "Webpack/Babel", "Marketing", "Music Prod.", "Vue.js", "Video Prod.", "New Tech.", "Game Design"],
+            strings: ["Front-end Dev.", "Java Dev.", "Mobile Design", "Unit Testing", "Webpack/Babel", "Marketing", "Music Prod.", "Vue.js", "React", "Video Prod.", "New Tech.", "Game Design"],
             typeSpeed: 40,
             backSpeed: 40,
             loop: true,
